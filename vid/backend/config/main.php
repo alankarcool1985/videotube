@@ -40,6 +40,17 @@ return [
             ],
 
         ],
+
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,   // do not publish the bundle
+                    'js' => [
+                        '',  // use custom jquery
+                    ]
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];
