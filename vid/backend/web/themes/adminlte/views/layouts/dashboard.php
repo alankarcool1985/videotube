@@ -34,10 +34,21 @@ $this->registerJsFile('@web/themes/adminlte/plugins/jQuery/jQuery-2.1.4.min.js')
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
     <?php $this->beginBody() ;?>
-    <?php echo $content;?>
+    <!-- Main Header Panel -->
+    <?php include 'includes/mainHeader.php'; ?>
 
- 
+      <!-- Left side column. contains the logo and sidebar -->
+      <?php include 'includes/leftSideBar.php';?>
+      <!--/Left side Column-->
+            <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+         <?php echo $content;?>
+      </div><!-- /.content-wrapper -->
 
+
+
+      <?php include 'includes/mainFooter.php';?>
+      <?php include 'includes/rightSideBar.php';?>
 
     <script>
       $.widget.bridge('uibutton', $.ui.button);
